@@ -1,3 +1,6 @@
+.App {
+  height: 100vh;
+}
 .Navigation {
   display: flex;
 }
@@ -10,5 +13,9 @@
 }
 
 .Navigation a:hover {
+  background-color: lightblue;
+}
+
+.currentPage {
   background-color: lightblue;
 }
