@@ -1,0 +1,57 @@
+.AddForm {
+  margin-bottom: 20px;
+}
+
+.AddForm button {
+  cursor: pointer;
+}
+
+.AddForm button,
+textarea {
+  border: none;
+  border-radius: 5px;
+}
+
+.AddButton {
+  background: #383738;
+  color: #b8b8b8;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.AddForm textarea {
+  background-color: #383738;
+  color: white;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  font-family: sans-serif;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.AddForm textarea:focus {
+  border: 2px solid #0f92fd;
+}
+
+.FormControls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.FormControls img {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.SubmitButton {
+  background: #1f59fc;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+}

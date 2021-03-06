@@ -1,0 +1,10 @@
+.Select {
+  outline: none;
+  background: transparent;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.Select option {
+  padding: 10px;
+}

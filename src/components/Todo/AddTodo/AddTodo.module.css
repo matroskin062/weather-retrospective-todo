@@ -1,0 +1,21 @@
+.AddTodo input,
+.AddTodo button {
+  outline: none;
+  background: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.AddTodo button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.AddTodo button:hover {
+  background-color: lightgray;
+}
+
+.AddTodo input {
+  padding: 5px;
+}
