@@ -14,5 +14,5 @@
   display: flex;
   gap: 10px;
   overflow-x: scroll;
-  justify-content: space-around;
+  justify-content: space-between;
 }
