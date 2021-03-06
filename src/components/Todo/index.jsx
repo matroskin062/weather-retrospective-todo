@@ -92,7 +92,7 @@ export default class TodoList extends Component {
           )}
         </div>
         {todos.map((todo) => (
-          <TodoItem {...todo} key={todo.id} bold={this.state.searchQuery} />
+          <TodoItem {...todo} key={todo.id} keyword={this.state.searchQuery} />
         ))}
       </div>
     );
