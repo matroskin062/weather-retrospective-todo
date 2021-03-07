@@ -47,6 +47,7 @@ export default class TodoList extends Component {
       (state) => ({
         ...state,
         selectedUser: id,
+        searchQuery: '',
       }),
       () => {
         this.getTodos(this.state.selectedUser);
@@ -59,6 +60,7 @@ export default class TodoList extends Component {
       title,
       userId: parseInt(this.state.selectedUser),
       completed: false,
+      id: performance.now(),
     };
 
     const response = await TodoAPI.addTodo(todo);
@@ -92,7 +94,13 @@ export default class TodoList extends Component {
           )}
         </div>
         {todos.map((todo) => (
-          <TodoItem {...todo} key={todo.id} keyword={this.state.searchQuery} />
+          <TodoItem
+            {...todo}
+            //i use performance.now() as key due to JSONPlaceholder always return same id
+            //Is it correct or not?
+            key={todo.id + performance.now()}
+            keyword={this.state.searchQuery}
+          />
         ))}
       </div>
     );

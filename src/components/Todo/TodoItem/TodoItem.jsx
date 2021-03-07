@@ -5,22 +5,17 @@ import withTodoItem from './withTodoItem';
 
 import styles from './TodoItem.module.css';
 
-const TodoItem = ({ title, id, updateStatus, completed, keyword }) => {
-  const makeBold = (item, keyword) => {
-    const re = new RegExp(`^(${keyword})`);
-    return item.replace(re, '<b>' + keyword + '</b>');
-  };
-
+const TodoItem = ({ title, toggleCompleted, completed, keyword, makeBold }) => {
   return (
     <div
       className={classNames(styles.TodoItem, {
         [styles.Done]: completed,
       })}
     >
-      <p dangerouslySetInnerHTML={{ __html: makeBold(title, keyword) }}></p>
+      <p dangerouslySetInnerHTML={makeBold(title, keyword)}></p>
       <div className={styles.Controls}>
         <button
-          onClick={() => updateStatus(id)}
+          onClick={() => toggleCompleted()}
           className={completed ? styles.DoneBtn : null}
         ></button>
       </div>

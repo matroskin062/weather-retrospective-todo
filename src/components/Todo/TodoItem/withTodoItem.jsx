@@ -7,12 +7,20 @@ const withTodoItem = (Component) => {
       completed: this.props.completed,
     };
 
-    updateStatus(id) {
-      TodoAPI.updateTodoStatus(id, !this.state.completed);
+    toggleCompleted() {
+      const { id } = this.props;
+      const { completed } = this.state;
+      TodoAPI.updateTodoStatus(id, !completed);
       this.setState((state) => ({
         ...state,
-        completed: !state.completed,
+        completed: !completed,
       }));
+    }
+
+    makeBold(item, keyword) {
+      const re = new RegExp(`\\b${keyword}`);
+      const boldText = item.replace(re, '<b>' + keyword + '</b>');
+      return { __html: boldText };
     }
 
     render() {
@@ -20,7 +28,8 @@ const withTodoItem = (Component) => {
         <Component
           {...this.props}
           completed={this.state.completed}
-          updateStatus={this.updateStatus.bind(this)}
+          toggleCompleted={this.toggleCompleted.bind(this)}
+          makeBold={this.makeBold}
         />
       );
     }
