@@ -1,7 +1,7 @@
 .Container {
   background: url('../../assets/bg.jpg') center center no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .App {

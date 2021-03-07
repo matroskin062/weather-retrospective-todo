@@ -1,6 +1,11 @@
 .App {
-  height: 100vh;
+  height: 100%;
 }
+
+.Wrapper {
+  height: calc(100vh - 41px);
+}
+
 .Navigation {
   display: flex;
 }
