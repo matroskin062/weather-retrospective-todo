@@ -2,10 +2,10 @@
   padding: 10px;
   border-radius: 15px;
   width: 100%;
-  height: 90%;
+  max-height: 90vh;
   min-height: 315px;
   background-color: #212121;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .Header {
@@ -36,4 +36,10 @@
 
 .CardsContainer::-webkit-scrollbar-button {
   display: none;
+}
+
+@media (max-width: 570px) {
+  .CardsContainer {
+    max-height: 30vh;
+  }
 }

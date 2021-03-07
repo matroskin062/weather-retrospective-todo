@@ -8,5 +8,12 @@
 .Controls {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .Controls {
+    flex-direction: column;
+  }
 }

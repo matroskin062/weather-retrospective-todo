@@ -21,6 +21,10 @@
   border: 1px solid rgb(62, 145, 62);
 }
 
+.TodoItem button:hover {
+  background-color: rgba(62, 145, 62, 0.575);
+}
+
 .Done {
   text-decoration: line-through;
   color: lightgray;
