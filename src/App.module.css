@@ -1,9 +1,5 @@
 .App {
-  height: 100%;
-}
-
-.Wrapper {
-  height: calc(100vh - 41px);
+  /* height: 100%; */
 }
 
 .Navigation {

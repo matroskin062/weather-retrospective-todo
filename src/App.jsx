@@ -19,14 +19,12 @@ function App() {
           Weather
         </NavLink>
       </div>
-      <div className={styles.Wrapper}>
-        <Switch>
-          <Route path='/weather' component={Weather} />
-          <Route path='/retro' component={Retro} />
-          <Route path='/todo' component={TodoList} />
-          <Route path='*' render={() => <Redirect to='/weather' />} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route path='/weather' component={Weather} />
+        <Route path='/retro' component={Retro} />
+        <Route path='/todo' component={TodoList} />
+        <Route path='*' render={() => <Redirect to='/weather' />} />
+      </Switch>
     </div>
   );
 }
