@@ -1,5 +1,5 @@
 import Column from './Column/Column';
-import { columns } from './data.js';
+import { columns } from './../../utils/retrospectiveColumns.js';
 
 import styles from './Retro.module.css';
 

@@ -1,8 +1,11 @@
 import React from 'react';
-import { formatDate, roundTemp } from '../utils';
+
+import { formatDate, roundTemp } from './../../../utils/weatherFormatters';
+
 import styles from './ForecastCard.module.css';
 
 const img_api = 'https://openweathermap.org/img/wn';
+
 const ForecastCard = ({ temp, dt, weather }) => {
   const weatherIcon = `${img_api}/${weather[0].icon}@2x.png`;
   const { description } = weather[0];

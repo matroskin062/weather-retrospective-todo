@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from './CurrentWeather.module.css';
+
 import {
   roundTemp,
   formatDate,
   convertPressure,
   convertWindDirection,
-} from '../utils';
+} from './../../../utils/weatherFormatters';
 
+import styles from './CurrentWeather.module.css';
 import humidityIco from '../../../assets/humidity_min.svg';
 import pressureIco from '../../../assets/pressure_min.svg';
 import windIco from '../../../assets/wind_min.svg';
