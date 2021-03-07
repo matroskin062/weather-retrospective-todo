@@ -7,7 +7,7 @@ import styles from './App.module.css';
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div>
       <div className={styles.Navigation}>
         <NavLink to='/todo' activeClassName={styles.currentPage}>
           Todo
