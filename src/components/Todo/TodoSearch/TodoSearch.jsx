@@ -7,20 +7,19 @@ const TodoSearch = ({ onSearch }) => {
 
   const handleChange = (e) => {
     setInputValue(e.currentTarget.value);
-  };
-
-  const handleClick = () => {
-    onSearch(inputValue);
+    onSearch(e.currentTarget.value);
   };
 
   return (
     <div className={styles.Search}>
-      <input
-        placeholder={'Search text in todos'}
-        value={inputValue}
-        onChange={handleChange}
-      />
-      <button onClick={handleClick}>Search</button>
+      <label>
+        Search:{' '}
+        <input
+          placeholder={'Search text in todos'}
+          value={inputValue}
+          onChange={handleChange}
+        />
+      </label>
     </div>
   );
 };
