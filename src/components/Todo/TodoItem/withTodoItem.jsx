@@ -19,7 +19,7 @@ const withTodoItem = (Component) => {
     }
 
     makeBold(item, keyword) {
-      const re = new RegExp(`\\b${keyword}`);
+      const re = new RegExp(`\\b${keyword.trim()}`);
       const boldText = item.replace(re, '<b>' + keyword + '</b>');
       return { __html: boldText };
     }
