@@ -8,10 +8,10 @@ const withTodoItem = (Component) => {
       completed: this.props.completed,
     };
 
-    toggleCompleted() {
+    async toggleCompleted() {
       const { id } = this.props;
       const { completed } = this.state;
-      TodoAPI.updateTodoStatus(id, !completed);
+      await TodoAPI.updateTodoStatus(id, !completed);
       this.setState((state) => ({
         ...state,
         completed: !completed,

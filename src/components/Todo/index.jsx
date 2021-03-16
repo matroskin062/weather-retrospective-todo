@@ -14,7 +14,7 @@ export default class TodoList extends Component {
     this.state = {
       users: [],
       todos: [],
-      selectedUser: null,
+      selectedUser: undefined,
       searchQuery: null,
     };
 
@@ -95,13 +95,7 @@ export default class TodoList extends Component {
           )}
         </div>
         {todos.map((todo) => (
-          <TodoItem
-            {...todo}
-            //i use performance.now() as key due to JSONPlaceholder always return same id
-            //Is it correct or not?
-            key={todo.id + performance.now()}
-            keyword={this.state.searchQuery}
-          />
+          <TodoItem {...todo} key={todo.id} keyword={this.state.searchQuery} />
         ))}
       </div>
     );

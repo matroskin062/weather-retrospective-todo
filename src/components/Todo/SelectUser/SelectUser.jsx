@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './SelectUser.module.css';
 
@@ -7,10 +7,13 @@ const SelectUser = ({ users, selectUser }) => {
     if (parseInt(e.target.value)) selectUser(e.target.value);
   };
 
+  useEffect(() => {
+    users.length && selectUser(users[0].id);
+  }, [users]);
+
   return (
     <div>
       <select onChange={handleSelect} className={styles.Select}>
-        <option>Select user...</option>
         {users.map((user) => (
           <option key={user.id} value={user.id}>
             {user.name}
